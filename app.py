@@ -1,25 +1,11 @@
 import os
-from flask import Flask, jsonify, abort, request
-from derp import Yiffer
+from flask import Flask, jsonify
+from routes import app_yiff, app_main
 
 
 app = Flask(__name__)
-yiffer = Yiffer()
-
-
-@app.route('/')
-def get_hello():
-    return jsonify(
-        code=400,
-        message='I don\'t think so'
-    )
-
-@app.route('/yiff/<name>')
-def get_yiff_name(name):
-    return jsonify(
-        code=200,
-        message=yiffer.yiff_me(name)
-    )
+app.register_blueprint(app_yiff)
+app.register_blueprint(app_main)
 
 
 if __name__ == '__main__':
