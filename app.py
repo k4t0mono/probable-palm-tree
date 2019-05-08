@@ -4,17 +4,18 @@ from derp import Yiffer
 
 
 app = Flask(__name__)
+yiffer = Yiffer()
 
 
-@app.route('/api/hello')
+@app.route('/')
 def get_hello():
     return jsonify(
-        code=200,
+        code=400,
         message='I don\'t think so'
     )
 
-@app.route('/api/hello/<name>')
-def get_hello_name(name):
+@app.route('/yiff/<name>')
+def get_yiff_name(name):
     return jsonify(
         code=200,
         message=yiffer.yiff_me(name)
@@ -23,5 +24,4 @@ def get_hello_name(name):
 
 if __name__ == '__main__':
     port = os.getenv('PORT', 58913)
-    yiffer = Yiffer()
     app.run(host='0.0.0.0', port=port, debug=True)
