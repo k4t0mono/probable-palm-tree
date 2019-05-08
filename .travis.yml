@@ -1,7 +1,10 @@
 dist: xenial
 language: python
 python:
-  - "3.5"
-  - "3.6"
-  - "3.7"
+- '3.5'
+- '3.6'
+- '3.7'
 script: python test.py
+deploy:
+  api_key:
+    secure: hPzt9UcflcoH4gknITxgXvHP31OL5lNcaculQ7YVRhYQFmhztrPxpbdYHmTMysovKYNZ3iHbBnBJLe8+9/ja9Lgwzbg7yCefQ3RiMMsz/UVXQVrPGVuGqLi0ZsXMkFmDYYpl5K/0v/48H6jvAzZ4i3KsT0npPfEBcirjW2356Vgu3gO5PyzcSvvnI/xfYDDcDn3/ois6hNsHGxIoGjbCgbDYOS9FWY7JFwHsHiA8yM8qQh465SHDw9F9HoE06mKzy9omgZEHsIKfsSoZyzaPguj5KyscYw+G8oO6hMcbOHQGySLC0Cw2LoojwmmasJcTWGryFQ9bdUNYOWrgzhmsYvIeF5T3j7MltpCIub/BjlfdZdq1lwgLr52PU/B0ij7iDGWx5lE/opEf944iNo31F9kFNiRVOHZ5tW9Op+NcDr2QM4XfDLvTrUJgWtHePbKafT8UH4Njs1Zt7xb4B9jIJxXz5fFsPgKK2nKLIZQmDiVHynZw1w7YYZ2EtOV7QB4BAAPgaSPFF1XXsU45yHJXwq4ZHxHVQF64V/kjVFrHM85xs+vHQrcKV1PJLNQFkYX5AaauwWAxo+WeQ0wvuRyFpscdnrZodTUL1hWgq+4mrUma2lcDBcjUbqr4i3PY7GoZLofCleh+cPRn+8G6KK6h62kB3gmLIJkhXY6YbQyiPMU=
