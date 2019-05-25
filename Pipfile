@@ -10,6 +10,9 @@ pylint = "*"
 flask = "*"
 nose2 = "*"
 coverage = "*"
+flask-marshmallow = "*"
+flask-sqlalchemy = "*"
+marshmallow-sqlalchemy = "*"
 
 [requires]
 python_version = "3.7"
