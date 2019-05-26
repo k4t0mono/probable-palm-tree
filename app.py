@@ -14,14 +14,14 @@ app.config['JSON_SORT_KEYS'] = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
-# Registering the routes
-from routes import *
-app.register_blueprint(app_person)
-app.register_blueprint(app_yiff)
-app.register_blueprint(app_main)
-
 
 if __name__ == '__main__':
     port = os.getenv('PORT', 58913)
+
+    # Registering the routes
+    from routes import *
+    app.register_blueprint(app_person)
+    app.register_blueprint(app_yiff)
+    app.register_blueprint(app_main)
 
     app.run(host='0.0.0.0', port=port, debug=True)

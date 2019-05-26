@@ -1,6 +1,7 @@
 import unittest
 import json
 from app import app, db
+from routes import app_person
 from models import Person
 from schemas import PersonSchema
 
@@ -8,6 +9,7 @@ from schemas import PersonSchema
 class TestRoutesPerson(unittest.TestCase):
 
     def setUp(self):
+        app.register_blueprint(app_person)
         self.app = app.test_client()
         db.create_all()
         self.person_schema = PersonSchema(strict=True)

@@ -2,11 +2,13 @@ import unittest
 import json
 from derp import Yiffer
 from app import app
+from routes import app_yiff
 
 
 class TestRoutesYiff(unittest.TestCase):
 
     def setUp(self):
+        app.register_blueprint(app_yiff)
         self.app = app.test_client()
         self.yiffer = Yiffer()
 

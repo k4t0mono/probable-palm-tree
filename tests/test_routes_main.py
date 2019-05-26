@@ -1,11 +1,13 @@
 import unittest
 import json
 from app import app
+from routes import app_main
 
 
 class TestRoutesMain(unittest.TestCase):
 
     def setUp(self):
+        app.register_blueprint(app_main)
         self.app = app.test_client()
 
     def test__get_hello__success(self):
