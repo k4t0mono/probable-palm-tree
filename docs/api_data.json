@@ -1,4 +1,4 @@
-define({ "api": [
+[
   {
     "type": "get",
     "url": "/",
@@ -310,9 +310,9 @@ define({ "api": [
     "type": "",
     "url": "",
     "version": "0.0.0",
-    "filename": "./doc/main.js",
-    "group": "_home_k4t0mono_projs_probable_palm_tree_doc_main_js",
-    "groupTitle": "_home_k4t0mono_projs_probable_palm_tree_doc_main_js",
+    "filename": "./docs/main.js",
+    "group": "_home_k4t0mono_projs_probable_palm_tree_docs_main_js",
+    "groupTitle": "_home_k4t0mono_projs_probable_palm_tree_docs_main_js",
     "name": ""
   }
-] });
+]
