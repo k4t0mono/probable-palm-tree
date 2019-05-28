@@ -9,7 +9,8 @@ class Sona(db.Model):
     owner_idx = db.Column(db.Integer, db.ForeignKey('person.idx'))
     owner = db.relationship('Person', backref='Sonas')
 
-    def __init__(self, idx, name, specie):
-        self.idx = idx
-        self.name = name
-        self.specie = specie
+    # def __init__(self, idx, name, specie, owner_idx):
+    #     self.idx = idx
+    #     self.name = name
+    #     self.specie = specie
+    #     self.owner_idx = owner_idx
