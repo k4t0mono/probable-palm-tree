@@ -8,7 +8,7 @@ from flask_marshmallow import Marshmallow
 app = Flask(__name__)
 
 # Config the data base
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI', 'sqlite:///yiff.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI', 'sqlite://')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['JSON_SORT_KEYS'] = False
 db = SQLAlchemy(app)
